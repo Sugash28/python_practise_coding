@@ -25,22 +25,53 @@ class LinkedList:
                 new_node.next=current_node.next
                 current_node.next=new_node
         else:
-                print("index is not range")        
+                print("index is not range")   
+    
     def Printll(self):
         current_node=self.head
         while current_node is not None:
             print(current_node.data)
             current_node=current_node.next
+
+class Solution:
+       def addtwonumbers(self,l1,l2): 
+               L1=""
+               L2=""
+               while l1.head is not None:
+                       L1+=str(l1.head.data)
+                       l1.head=l1.head.next
+               print(L1)
+                       
+               while l2.head is not None:
+                       L2+=str(l2.head.data)
+                       l2.head=l2.head.next
+               print(L2)
+               o=int(L1)+int(L2)
+               print(o)
+               out=[]
+               for i in str(o):
+                        out.append(int(i))
+               print(out)
+                       
+        
+
                    
         
                 
                 
 l1=LinkedList()
-l1.insertb(10)
-l1.insertb(20)  
-l1.insertb(30)
-l1.inserti(40, 1) 
-l1.Printll()
+l2=LinkedList()
+l1.insertb(2)
+l1.insertb(4)  
+l1.insertb(3)
+l2.insertb(5)
+l2.insertb(6)  
+l2.insertb(4)
+s=Solution()
+s.addtwonumbers(l1,l2)
+
+
+
 
                 
             
